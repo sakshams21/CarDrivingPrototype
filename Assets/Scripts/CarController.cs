@@ -9,9 +9,12 @@ public class CarController : MonoBehaviour
 
     [SerializeField] private Rigidbody MainBody;
     [SerializeField] private float ForceModifier;
+    [SerializeField] private float MaxSpeed;
+    [SerializeField] private float HandlingModifier;
     private CustomInput _customInputRef;
 
-    private Vector2 _value;
+    private Vector2 _handlingValue;
+    private Vector3 _mainBodyVelocity;
     private void Awake()
     {
         _customInputRef = new CustomInput();
@@ -20,19 +23,50 @@ public class CarController : MonoBehaviour
     private void Start()
     {
         _customInputRef.Player.Enable();
-        //_customInputRef.Player.ForwardBackward.performed += Movement;
-
     }
 
     private void Update()
     {
-        _value = _customInputRef.Player.ForwardBackward.ReadValue<Vector2>();
-       
-        if(_value.y==0) return;
-        if(_value.y>0)
-            MainBody.AddForce(Vector3.forward*ForceModifier);
+        _handlingValue = _customInputRef.Player.Handling.ReadValue<Vector2>();
+
+        Debug.Log(MainBody.velocity);
+        Move(_handlingValue.x,_handlingValue.y);
+        
+    }
+
+    private void Move(float horizontal,float vertical)
+    {
+        if(vertical==0) return;
+
+        _mainBodyVelocity = MainBody.velocity;
+
+        if (vertical > 0)
+        {
+            if(_mainBodyVelocity.z<MaxSpeed)
+                MainBody.AddForce(Vector3.forward*ForceModifier,ForceMode.Acceleration);
+            else
+            {
+                _mainBodyVelocity.z = MaxSpeed;
+            }
+        }
+
         else
-            MainBody.AddForce(Vector3.back*ForceModifier);
+        {
+            if(_mainBodyVelocity.z>=-MaxSpeed*0.3f)
+                MainBody.AddForce(Vector3.back * (ForceModifier * 0.3f),ForceMode.Acceleration);
+            else 
+                _mainBodyVelocity.z = -1*(MaxSpeed * 0.3f);
+        }
+        if (horizontal != 0)
+        {
+            _mainBodyVelocity = MainBody.velocity;
+            _mainBodyVelocity.x = horizontal * HandlingModifier;
+            MainBody.velocity = _mainBodyVelocity;
+        }
+        else
+        {
+            MainBody.velocity = _mainBodyVelocity;
+        }
     }
 
 

@@ -35,38 +35,11 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""Accelerate"",
-                    ""type"": ""Value"",
-                    ""id"": ""b1cc8611-cf60-491e-930b-3cfc6e3e1760"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""Decelerate"",
-                    ""type"": ""Button"",
-                    ""id"": ""3393b516-3948-4282-8ca3-1a8a0ca20bea"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""ForwardBackward"",
-                    ""type"": ""Value"",
-                    ""id"": ""354eb86b-2a42-41e7-9a61-1b8a17145d40"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
                 {
-                    ""name"": ""AD Keyboard"",
+                    ""name"": ""2D Vector"",
                     ""id"": ""0be8d6c7-c1e1-47bd-98a1-18fc58fdf55f"",
                     ""path"": ""Dpad"",
                     ""interactions"": """",
@@ -75,6 +48,50 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
                     ""action"": ""Handling"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""833aa7aa-ee30-4afe-a0cb-f59ee6b4afb8"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Handling"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""bf4a8050-e288-4f8c-a040-38f376aad7cd"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Handling"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""1159ddd5-9199-47b3-850b-636e2b477462"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Handling"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""9926fb4c-49fe-441a-b856-20e38d24c936"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Handling"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""left"",
@@ -94,6 +111,17 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Handling"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""c4a2db43-5f16-49e4-9927-8ee58864d0a2"",
+                    ""path"": ""<Gamepad>/leftStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
                     ""action"": ""Handling"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -121,112 +149,13 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""b7adc8a3-108a-4d5c-8225-ba05129b6c9c"",
-                    ""path"": ""<Gamepad>/rightStick"",
+                    ""name"": ""right"",
+                    ""id"": ""e35c7121-9110-40d0-bff3-de6196204dce"",
+                    ""path"": ""<Gamepad>/leftStick/right"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Joystick"",
+                    ""groups"": """",
                     ""action"": ""Handling"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""f350a9a0-7fc1-4e3f-bc95-b97a01513928"",
-                    ""path"": ""<Gamepad>/rightTrigger"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Accelerate"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""480ccc51-79f8-491c-85bc-7d1516366f99"",
-                    ""path"": ""<Keyboard>/upArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Accelerate"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""0b90b00d-f344-4542-9683-c8388e28774d"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Accelerate"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""1600ff54-08f5-4e1b-bcbe-9a9583c86543"",
-                    ""path"": ""<Gamepad>/leftTrigger"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Decelerate"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""4f7dcacc-ae07-464f-8f23-072cd55b8150"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Decelerate"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""b9e85536-4fd1-43be-af04-3ef9ad0bfcf1"",
-                    ""path"": ""<Keyboard>/downArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Decelerate"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""2D Vector"",
-                    ""id"": ""d51592f8-11c7-48a4-bf09-685ee63cb86c"",
-                    ""path"": ""2DVector"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ForwardBackward"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""9926fb4c-49fe-441a-b856-20e38d24c936"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ForwardBackward"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""bf4a8050-e288-4f8c-a040-38f376aad7cd"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ForwardBackward"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 }
@@ -766,9 +695,6 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Handling = m_Player.FindAction("Handling", throwIfNotFound: true);
-        m_Player_Accelerate = m_Player.FindAction("Accelerate", throwIfNotFound: true);
-        m_Player_Decelerate = m_Player.FindAction("Decelerate", throwIfNotFound: true);
-        m_Player_ForwardBackward = m_Player.FindAction("ForwardBackward", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -843,17 +769,11 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Player;
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_Handling;
-    private readonly InputAction m_Player_Accelerate;
-    private readonly InputAction m_Player_Decelerate;
-    private readonly InputAction m_Player_ForwardBackward;
     public struct PlayerActions
     {
         private @CustomInput m_Wrapper;
         public PlayerActions(@CustomInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @Handling => m_Wrapper.m_Player_Handling;
-        public InputAction @Accelerate => m_Wrapper.m_Player_Accelerate;
-        public InputAction @Decelerate => m_Wrapper.m_Player_Decelerate;
-        public InputAction @ForwardBackward => m_Wrapper.m_Player_ForwardBackward;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -866,15 +786,6 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
             @Handling.started += instance.OnHandling;
             @Handling.performed += instance.OnHandling;
             @Handling.canceled += instance.OnHandling;
-            @Accelerate.started += instance.OnAccelerate;
-            @Accelerate.performed += instance.OnAccelerate;
-            @Accelerate.canceled += instance.OnAccelerate;
-            @Decelerate.started += instance.OnDecelerate;
-            @Decelerate.performed += instance.OnDecelerate;
-            @Decelerate.canceled += instance.OnDecelerate;
-            @ForwardBackward.started += instance.OnForwardBackward;
-            @ForwardBackward.performed += instance.OnForwardBackward;
-            @ForwardBackward.canceled += instance.OnForwardBackward;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -882,15 +793,6 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
             @Handling.started -= instance.OnHandling;
             @Handling.performed -= instance.OnHandling;
             @Handling.canceled -= instance.OnHandling;
-            @Accelerate.started -= instance.OnAccelerate;
-            @Accelerate.performed -= instance.OnAccelerate;
-            @Accelerate.canceled -= instance.OnAccelerate;
-            @Decelerate.started -= instance.OnDecelerate;
-            @Decelerate.performed -= instance.OnDecelerate;
-            @Decelerate.canceled -= instance.OnDecelerate;
-            @ForwardBackward.started -= instance.OnForwardBackward;
-            @ForwardBackward.performed -= instance.OnForwardBackward;
-            @ForwardBackward.canceled -= instance.OnForwardBackward;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -1038,9 +940,6 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
     public interface IPlayerActions
     {
         void OnHandling(InputAction.CallbackContext context);
-        void OnAccelerate(InputAction.CallbackContext context);
-        void OnDecelerate(InputAction.CallbackContext context);
-        void OnForwardBackward(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
