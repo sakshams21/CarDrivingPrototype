@@ -13,6 +13,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Breaking",
+                    "type": "Button",
+                    "id": "e018b4a6-c029-4fe6-a459-058ea15a0893",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -136,6 +145,17 @@
                     "action": "Handling",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "e502621e-a87c-4db1-876d-aa253cf2cc02",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Breaking",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },

@@ -35,6 +35,15 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Breaking"",
+                    ""type"": ""Button"",
+                    ""id"": ""e018b4a6-c029-4fe6-a459-058ea15a0893"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -158,6 +167,17 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
                     ""action"": ""Handling"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e502621e-a87c-4db1-876d-aa253cf2cc02"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Breaking"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -695,6 +715,7 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Handling = m_Player.FindAction("Handling", throwIfNotFound: true);
+        m_Player_Breaking = m_Player.FindAction("Breaking", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -769,11 +790,13 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Player;
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_Handling;
+    private readonly InputAction m_Player_Breaking;
     public struct PlayerActions
     {
         private @CustomInput m_Wrapper;
         public PlayerActions(@CustomInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @Handling => m_Wrapper.m_Player_Handling;
+        public InputAction @Breaking => m_Wrapper.m_Player_Breaking;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -786,6 +809,9 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
             @Handling.started += instance.OnHandling;
             @Handling.performed += instance.OnHandling;
             @Handling.canceled += instance.OnHandling;
+            @Breaking.started += instance.OnBreaking;
+            @Breaking.performed += instance.OnBreaking;
+            @Breaking.canceled += instance.OnBreaking;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -793,6 +819,9 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
             @Handling.started -= instance.OnHandling;
             @Handling.performed -= instance.OnHandling;
             @Handling.canceled -= instance.OnHandling;
+            @Breaking.started -= instance.OnBreaking;
+            @Breaking.performed -= instance.OnBreaking;
+            @Breaking.canceled -= instance.OnBreaking;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -940,6 +969,7 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
     public interface IPlayerActions
     {
         void OnHandling(InputAction.CallbackContext context);
+        void OnBreaking(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
