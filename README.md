@@ -55,6 +55,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you have questions or suggestions, feel free to contact us:
 
-- Email:[Email Link](sakshams21@gmail.com)
+- Email:📫 ss21Gaming@gmail.com
   
 Happy driving!
