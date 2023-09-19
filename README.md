@@ -1,16 +1,16 @@
-# Unity Car Physics Prototype
+# 🚗 Unity Car Physics Prototype 🛣️
 
 ![Unity Version](https://img.shields.io/badge/Unity-2020.3%2B-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
 Welcome to the Unity Car Physics Prototype repository! This project serves as a starting point for creating realistic car physics in Unity. Whether you're a game developer looking to implement driving mechanics or a curious learner exploring vehicle physics, this prototype can be a valuable resource.
 
-## Features
+## ✨ Features
 
-- Arcade car physics simulation(Inspired from [Crew 2](https://www.ubisoft.com/en-us/game/the-crew/the-crew-2)).
-- Simple and customizable vehicle controller.
-- Terrain and obstacle collision detection.
-- Smooth camera follow for a better driving experience.
+- 🏎️ Arcade car physics simulation(Inspired from [Crew 2](https://www.ubisoft.com/en-us/game/the-crew/the-crew-2)).
+- 🎮 Simple and customizable vehicle controller.
+- 🌄 Terrain and obstacle collision detection.
+- 📹 Smooth camera follow for a better driving experience.
 
 ## Getting Started
 
@@ -31,30 +31,30 @@ Welcome to the Unity Car Physics Prototype repository! This project serves as a 
 - Experiment with the Custom Car Controller to customize the car's behavior.
 - Study the code and physics settings to understand how the car mechanics are implemented.
 
-## Contributing
+## 🤝 Contributing
 
 Contributions are welcome! If you want to improve the prototype, fix issues, or add new features, please follow these steps:
 
-1. Fork the repository.
-2. Create a new branch for your changes: `git checkout -b feature/new-feature`
-3. Commit your changes: `git commit -m 'Add new feature'`
-4. Push to the branch: `git push origin feature/new-feature`
-5. Open a pull request.
+1. 🍴 Fork the repository.
+2. 🌿 Create a new branch for your changes: `git checkout -b feature/new-feature`
+3. 🚀 Commit your changes: `git commit -m 'Add new feature'`
+4. 🚧 Push to the branch: `git push origin feature/new-feature`
+5. 📥 Open a pull request.
 
 Please ensure your pull request follows our [code of conduct](CODE_OF_CONDUCT.md).
 
-## License
+## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Acknowledgments
+## 🙏 Acknowledgments
 
 - Special thanks to [Name of the person or organization] for their valuable contributions or inspiration.
 
-## Contact
+## 📬 Contact
 
 If you have questions or suggestions, feel free to contact us:
 
-- 📫Email:ss21Gaming@gmail.com
+- 📧 Email:ss21Gaming@gmail.com
   
 Happy driving!
