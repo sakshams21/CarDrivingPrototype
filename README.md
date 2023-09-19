@@ -20,7 +20,7 @@ Welcome to the Unity Car Physics Prototype repository! This project serves as a 
 
 ### Installation
 
-1. Clone this repository: `git clone https://github.com/your-username/unity-car-physics-prototype.git`
+1. Clone this repository: `git clone https://github.com/sakshams21/unity-car-physics-prototype.git`
 2. Open the project in Unity.
 3. Open the `CarScene` scene.
 4. Play the scene to experience the car physics prototype.
@@ -30,6 +30,35 @@ Welcome to the Unity Car Physics Prototype repository! This project serves as a 
 - Use the arrow keys (or your preferred input) to control the car.
 - Experiment with the Custom Car Controller to customize the car's behavior.
 - Study the code and physics settings to understand how the car mechanics are implemented.
+
+## To-Do List 📝
+
+### Core Driving Mechanics 🚗
+
+1. **Vehicle Physics**: Refine and enhance the suspension(Currently it does not work well with bumps)
+
+2. **Steering and Controls**: Implement responsive and intuitive steering controls, ensuring an enjoyable driving experience.
+
+3. **Drifting Mechanics**: Add drifting mechanics to enhance gameplay and allow players to perform exciting maneuvers.
+
+### Environment and Gameplay 🌍
+
+4. **Track Generation**: Create mostly F1 Circuits.
+
+5. **Points System**: To implement *Near Miss* feature.
+
+### Visual and Audio Enhancements 🌟
+
+6. **Graphics**: Improve visual quality with better textures, lighting, and post-processing effects to make the game visually appealing.
+
+7. **Engine Sounds**: Implement engine sounds with proper gear shifts.
+
+### User Interface and Feedback 📊
+
+8. **HUD**: Create an informative heads-up display (HUD) that provides essential information, including speed, distance, and lap times.
+
+9. **Feedback System**: Add visual and audio feedback for collisions, speed boosts, and other in-game events to provide a more immersive experience.
+
 
 ## 🤝 Contributing
 
