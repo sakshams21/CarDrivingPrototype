@@ -3,7 +3,7 @@
 ![Unity Version](https://img.shields.io/badge/Unity-2020.3%2B-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-Welcome to the Unity Car Physics Prototype repository! This project serves as a starting point for creating realistic car physics in Unity. Whether you're a game developer looking to implement driving mechanics or a curious learner exploring vehicle physics, this prototype can be a valuable resource.
+Welcome to the Unity Car Physics Prototype repository! This project serves as a starting point for creating Arcade car physics in Unity. Whether you're a game developer looking to implement driving mechanics or a curious learner exploring vehicle physics, this prototype can be a valuable resource.
 
 ## ✨ Features
 
